@@ -75,7 +75,7 @@
   --space-2xl: 4rem;
 
   /* Fontes */
-  --font-family: 'Nunito', sans-serif;
+  --font-family: "Nunito", sans-serif;
   --font-size-base: 16px;
   --line-height-base: 1.6;
 }
@@ -3812,4 +3812,111 @@ body.modo-acolhedor select:focus-visible,
 body.modo-acolhedor textarea:focus-visible,
 body.modo-acolhedor [tabindex]:focus-visible {
   outline-color: var(--acolhedor-accent-light);
+}
+
+/* =====================================================
+   AJUSTES MOBILE (melhorar responsividade em telas pequenas)
+   ===================================================== */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header {
+    padding: 0.5rem 0;
+  }
+
+  .header-content {
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  }
+
+  .hero {
+    padding-top: 64px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: var(--space-lg) 0;
+    gap: var(--space-lg);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: none;
+  }
+
+  .hero-buttons .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    max-width: 320px;
+  }
+
+  .mobile-menu {
+    top: 56px;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-menu .mobile-nav-link {
+    padding: 0.75rem 1rem;
+  }
+
+  .footer {
+    padding: var(--space-lg) 0;
+  }
+
+  .footer-content {
+    gap: var(--space-md);
+  }
+
+  .footer-info {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-nav a {
+    font-size: 0.9rem;
+  }
+
+  .skip-link {
+    left: 1rem;
+    transform: none;
+  }
+
+  .emotions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
 }
